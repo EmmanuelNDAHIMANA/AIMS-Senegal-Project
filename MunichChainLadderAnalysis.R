@@ -22,12 +22,13 @@ plot(MCL)
 MCL$lambdaP
 MCL$lambdaI
 #The conditional deviations plots in figure 4.3 and figure 4.4 can be ploted like this.
-plot(MCL$rhoP.sigma, type="l", col="blue",lty=1, lwd=3, ylab="Deviations", xlab="development periods")
+plot(MCL$rhoP.sigma, type="l", col="blue",lty=1, cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5, lwd=3, ylab="Deviations", xlab="development periods")
 lines(MCL$rhoI.sigma, type="l", col="red",lty=2, lwd=3, ylab="Incurred factors", xlab="development periods")
 legend("topright", lty = c(1,2),col = c("blue","red"), lwd = c(3,3), legend =c("Paid deviations","incurred deviations"))
+axis(1, at = c(32.65), cex.axis =2)
 
 #The plots of chain ladder-link ag-to-age factors in figure 4.5 and figure 4.6 can be ploted like this.
-plot(MCL$qinverse.f, type="l", col="red", ylim=c(0.1,4),lwd=3, pch=2, lty=3, ylab="age-to-age factors", xlab="development periods")
+plot(MCL$qinverse.f, type="l", col="red", ylim=c(0.1,4),lwd=3, cex=2, cex.lab=1.5, cex.axis=1.5, pch=2, lty=3, ylab="age-to-age factors", xlab="development periods")
 lines(MCL$q.f, type="l", col="blue", lwd=3, ylab="age-to-age factor", xlab="development periods")
 abline(h=1, lty=2, col="black")
 legend("topright", lty = c(3,1),col = c("red","blue"), lwd = c(3,3), legend =c("Incurred/Paid age-to-age factors","Paid/Incurred age-to-age factors"))
@@ -35,7 +36,7 @@ legend("topright", lty = c(3,1),col = c("red","blue"), lwd = c(3,3), legend =c("
 
 
 #The weighted average age-to-age factors in figure 4.7 and figure 4.8 can be ploted like this.
-plot(MCL$MackPaid$f , type="l", col="red", lty=2,lwd=3, ylab="Weighted average age-to-age factors", xlab="development periods")
+plot(MCL$MackPaid$f , type="l", col="red", lty=2, cex.lab=1.5, cex.axis=1.5,lwd=3, ylab="Weighted average age-to-age factors", xlab="development periods")
 lines(MCL$MackIncurred$f , type="o", col="blue", lwd=3, ylab="Incurred factors", xlab="development periods")
 legend("topright", lty = c(3,1),col = c("red","blue"), lwd = c(3,3), legend =c("Paid factors","Incurred factors"))
 
